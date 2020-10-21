@@ -41,6 +41,29 @@ namespace CSharpOOP
             Age += 1;
         }
 
+        // Default Constructor - Takes no parameters, and sets default values for the properties.
+        public Person()
+        {
+            FirstName = "John";
+            LastName = "Doe";
+            Age = 20;
+        }
+
+        // Partial Constructror - Takes parameters for some properties, and defaults others.
+        public Person(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Age = 20;
+        }
+
+        // Greedy Constructor - Takes paramaters for all properties.
+        public Person(string firstName, string lastName, int age)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Age = age;
+        }
 
 
         /*
