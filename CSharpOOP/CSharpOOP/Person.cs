@@ -18,6 +18,23 @@ namespace CSharpOOP
 
         public string LastName { get; set; }
 
+        private int _age;
+        public int Age
+        {
+            get
+            {
+                return _age;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("Age must be greater than, or equal to, zero.");
+                }
+                _age = value;
+            }
+        }
+
         /*
 
         // Private items cannot be seen outside of the class. Marking it as private enforces that all data to be stored MUST go through the property.
