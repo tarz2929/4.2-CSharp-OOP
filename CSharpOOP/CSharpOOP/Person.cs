@@ -11,7 +11,7 @@ namespace CSharpOOP
         // AccessModifier DataType PropertyName { get; set; }
         public string FirstName { get; set; }
 
-        // Private items cannot be seen outside of the class.
+        // Private items cannot be seen outside of the class. Marking it as private enforces that all data to be stored MUST go through the property.
         private string _lastName;
         // Fully-Implemented Property (You specify the beahviour for the "getter" (accessor) and "setter" (mutator).
         public string LastName { 
