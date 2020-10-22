@@ -26,6 +26,12 @@ namespace CSharpOOP
 
             Console.WriteLine($"joe variable: {joe.FirstName} {joe.LastName}");
             Console.WriteLine($"First Student: {mathTeacher.Class[0].FirstName} {mathTeacher.Class[0].LastName}");
+
+            mathTeacher.Class[0].LastName = "Shepard";
+
+            Console.WriteLine($"joe variable: {joe.FirstName} {joe.LastName}");
+            Console.WriteLine($"First Student: {mathTeacher.Class[0].FirstName} {mathTeacher.Class[0].LastName}");
+
         }
     }
 }
