@@ -18,6 +18,8 @@ namespace CSharpOOP
 
         public string LastName { get; set; }
 
+        public int BirthYear { get; set; }
+
         private int _age;
         public int Age
         {
@@ -27,9 +29,11 @@ namespace CSharpOOP
             }
             set
             {
-                if (value < 0)
+                // Any other property that is being referenced in validation (such as BirthYear) must be set prior to this setter being called in the constructor. Otherwise, the math will do some funky things, as BirthYear will be 0 when this setter is called.
+                if (value < DateTime.Now.Year - BirthYear - 1 || 
+                    value > DateTime.Now.Year - BirthYear + 1)
                 {
-                    throw new Exception("Age must be greater than, or equal to, zero.");
+                    throw new Exception("Age must be within one year of the current year minus the birth year.");
                 }
                 _age = value;
             }
@@ -46,7 +50,9 @@ namespace CSharpOOP
         {
             FirstName = "John";
             LastName = "Doe";
+            BirthYear = 2000;
             Age = 20;
+            
         }
 
         // Partial Constructror - Takes parameters for some properties, and defaults others.
