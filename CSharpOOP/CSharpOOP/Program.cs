@@ -13,7 +13,7 @@ namespace CSharpOOP
             // Static method example.
             Student.Sleep();
 
-            Teacher theTeacher = new Teacher("Teacher", "McTest", 1, theRoom);
+            Teacher theTeacher = new Teacher("Teacher", "McTest", theRoom);
 
             //List<Student> someStudents = new List<Student>();
             theTeacher.Class[0] = theStudent;
