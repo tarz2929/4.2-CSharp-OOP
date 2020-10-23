@@ -65,5 +65,13 @@ namespace CSharpOOP
             EnergyLevel += 10;
             StressLevel -= 5;
         }
+
+        abstract public string WriteInfo();
+
+        public Person(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
     }
 }

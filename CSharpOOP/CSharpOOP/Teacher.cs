@@ -41,12 +41,14 @@ namespace CSharpOOP
             StressLevel -= 5;
         }
         public Teacher(string firstName, string lastName, Classroom room)
+            : base(firstName, lastName)
         {
-            FirstName = firstName;
-            LastName = lastName;
-
             Class = new List<Student>();            
             Room = room;
+        }
+        public override string WriteInfo()
+        {
+            return "This is a teacher!";
         }
     }
 }
