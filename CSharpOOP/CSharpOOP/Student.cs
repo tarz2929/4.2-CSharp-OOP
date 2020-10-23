@@ -7,13 +7,6 @@ namespace CSharpOOP
 {
     class Student : Person
     {
-
-        public void Sleep()
-        {
-            EnergyLevel += 25;
-            StressLevel -= 30;
-        }
-
         public void DoHomework()
         {
             EnergyLevel -= 20;

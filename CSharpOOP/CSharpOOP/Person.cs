@@ -52,5 +52,10 @@ namespace CSharpOOP
                 }
             }
         }
+        public void Sleep()
+        {
+            EnergyLevel += 25;
+            StressLevel -= 30;
+        }
     }
 }
