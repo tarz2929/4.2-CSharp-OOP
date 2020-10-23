@@ -12,6 +12,16 @@ namespace CSharpOOP
 
         public Classroom Room { get; set; }
 
+        // "Derived" properties are derived from other properties.
+        // They have no backing variables themselves.
+        public override string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
+
         public void AssignHomework()
         {
             foreach (Student student in Class)

@@ -11,6 +11,8 @@ namespace CSharpOOP
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        public abstract string FullName { get; }
+
         public DateTime DateOfBirth { get; set; }
 
         private int _energyLevel;
