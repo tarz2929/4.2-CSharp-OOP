@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace CSharpOOP
@@ -10,13 +11,13 @@ namespace CSharpOOP
         public string LastName { get; set; }
 
         private int _energyLevel;
-        private int EnergyLevel
+        public int EnergyLevel
         {
             get
             {
                 return _energyLevel;
             }
-            set
+            private set
             {
                 if (value < 0)
                 {
@@ -26,12 +27,12 @@ namespace CSharpOOP
             }
         }
         private int _stressLevel;
-        private int StressLevel {
+        public int StressLevel {
             get
             {
                 return _stressLevel;
             }
-            set
+            private set
             {
                 if (value > 100)
                 {
