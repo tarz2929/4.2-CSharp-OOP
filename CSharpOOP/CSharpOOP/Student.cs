@@ -47,14 +47,14 @@ namespace CSharpOOP
                 {
                     _stressLevel = value;
                 }
-                
             }
         }
 
-        public void Sleep()
+        // Static methods cannot reference state properties, but if they don't, they can be run on the class name instead of on an instance.
+        public static void Sleep()
         {
-            EnergyLevel += 25;
-            StressLevel -= 30;
+            //EnergyLevel += 25;
+            //StressLevel -= 30;
         }
 
         public void DoHomework()

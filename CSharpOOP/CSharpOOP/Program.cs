@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpOOP
 {
@@ -6,36 +7,27 @@ namespace CSharpOOP
     {
         static void Main(string[] args)
         {
-            Teacher mathTeacher = new Teacher("Bob", "Jones", 10, new Classroom(101));
+            Student theStudent = new Student("Test", "McTest");
+            Classroom theRoom = new Classroom(101);
 
-            Student joe = new Student("Joe", "Smith");
-            Student sally = new Student("Sally", "Howard");
+            // Static method example.
+            Student.Sleep();
+
+            Teacher theTeacher = new Teacher("Teacher", "McTest", 1, theRoom);
+
+            //List<Student> someStudents = new List<Student>();
+            theTeacher.Class[0] = theStudent;
+
+            //someStudents[0].DoHomework();
+            theTeacher.Class[0].DoHomework();
+
+            //theRoom.RoomNumber
+            //theTeacher.Room.RoomNumber
 
 
-
-            Console.WriteLine(joe);
-            Console.WriteLine(sally);
-
-            mathTeacher.AssignHomework();
-
-            string joesState = joe.ToString();
-
-            Console.WriteLine(joe);
-            Console.WriteLine(sally);
-
-            joe.Sleep();
-            joe.Sleep();
-            joe.Sleep();
-            Console.WriteLine(joe);
 
         }
 
-        public void WriteMenu()
-        {
-            Console.WriteLine("Option 1");
-            Console.WriteLine("Option 2");
-            Console.WriteLine("Option 3");
-            Console.WriteLine("Option 4");
-        }
+
     }
 }
