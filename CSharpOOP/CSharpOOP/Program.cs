@@ -10,9 +10,6 @@ namespace CSharpOOP
             Student theStudent = new Student("Test", "McTest");
             Classroom theRoom = new Classroom(101);
 
-            // Static method example.
-            Student.Sleep();
-
             Teacher theTeacher = new Teacher("Teacher", "McTest", theRoom);
 
             //List<Student> someStudents = new List<Student>();
@@ -21,7 +18,6 @@ namespace CSharpOOP
             //someStudents[0].DoHomework();
             theTeacher.Class[0].DoHomework();
 
-            theStudent.EnergyLevel = 100000;
             //theRoom.RoomNumber
             //theTeacher.Room.RoomNumber
 
