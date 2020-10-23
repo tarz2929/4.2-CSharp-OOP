@@ -4,11 +4,8 @@ using System.Text;
 
 namespace CSharpOOP
 {
-    class Teacher
+    class Teacher : Person
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        
         public List<Student> Class { get; set; }
 
         public Classroom Room { get; set; }
