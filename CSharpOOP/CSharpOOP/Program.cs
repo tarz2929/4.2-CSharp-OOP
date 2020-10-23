@@ -21,7 +21,7 @@ namespace CSharpOOP
             //someStudents[0].DoHomework();
             theTeacher.Class[0].DoHomework();
 
-
+            theStudent.EnergyLevel = 100000;
             //theRoom.RoomNumber
             //theTeacher.Room.RoomNumber
 
