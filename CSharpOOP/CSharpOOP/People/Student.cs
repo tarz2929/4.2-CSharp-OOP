@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace CSharpOOP
+namespace CSharpOOP.People
 {
     class Student : Person
     {

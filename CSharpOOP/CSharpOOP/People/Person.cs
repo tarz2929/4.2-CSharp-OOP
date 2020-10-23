@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CSharpOOP
+namespace CSharpOOP.People
 {
     // An abstract class CANNOT be instantiated.
     // It's typically used when it doesn't make logical sense to instantiate the base class.
