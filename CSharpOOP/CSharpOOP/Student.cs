@@ -7,10 +7,18 @@ namespace CSharpOOP
 {
     class Student : Person
     {
+        // When students sleep, energy level goes up by 35, stress goes down by 30.
+
         public void DoHomework()
         {
             EnergyLevel -= 20;
             StressLevel += 25;
+        }
+
+        public override void Sleep()
+        {
+            EnergyLevel += 35;
+            StressLevel -= 30;
         }
 
         public Student(string firstName, string lastName)

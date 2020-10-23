@@ -4,7 +4,9 @@ using System.Text;
 
 namespace CSharpOOP
 {
-    class Person
+    // An abstract class CANNOT be instantiated.
+    // It's typically used when it doesn't make logical sense to instantiate the base class.
+    abstract class Person
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -52,10 +54,14 @@ namespace CSharpOOP
                 }
             }
         }
-        public void Sleep()
-        {
-            EnergyLevel += 25;
-            StressLevel -= 30;
-        }
+
+        // What it means on methods, is that while it has no functionality here, all derived classes MUST have functionality.
+        abstract public void Sleep();
+
+        // In-Class Practice:
+        // Add a Eat() method that will increase energy and decrease stress.
+        // Teacher: +15 energy, -5 stress.
+        // Student: +20 energy, -10 stress.
+
     }
 }
