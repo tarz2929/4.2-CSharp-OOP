@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CSharpOOP.Shapes
 {
+    // Pillar: Abstraction
     abstract class Shape
     {
         /*

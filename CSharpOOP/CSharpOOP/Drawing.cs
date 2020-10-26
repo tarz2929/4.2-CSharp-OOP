@@ -12,9 +12,9 @@ namespace CSharpOOP
             ✅ “Shapes” (private getter and setter)
                 ✅ Polymorphic list of “Shape”.
             ✅ “SpaceCovered” (public getter only)
-                Total area of the contents of “Shapes”.
+                ✅ Total area of the contents of “Shapes”.
             ✅ “LinesDrawn” (public getter only).
-                The total perimeter/circumference of the contents of “Shapes”.
+                ✅ The total perimeter/circumference of the contents of “Shapes”.
         Methods:
             ✅ “Draw(Shape)” 
                 ✅ Accepts a polymorphic “Shape” argument and adds it to the “Shapes” list.
@@ -22,6 +22,7 @@ namespace CSharpOOP
             ✅ A default constructor that will initialize “Shapes”.
         */
 
+        // Pillar: Polymorphism
         private List<Shape> Shapes { get; set; }
 
         public double SpaceCovered 
@@ -50,6 +51,7 @@ namespace CSharpOOP
             }
         }
 
+        // Pillar: Encapsulation
         public void Draw(Shape shape)
         {
             Shapes.Add(shape);

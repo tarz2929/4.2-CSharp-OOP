@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CSharpOOP.Shapes
 {
+    // Pillar: Inheritance
     class Circle : Shape
     {
         /*
