@@ -15,28 +15,18 @@ namespace CSharpOOP.Shapes
                 ✅ Public getter that derives its value from “Radius”.
 
         */
-        public override double Perimeter
-        {
-            get
-            {
-                return Math.PI * Diameter;
-            }
-        }
+        public override double Perimeter => Math.PI * Diameter;
 
-        public override double Area
-        {
-            get
-            {
-                return Math.PI * Math.Pow(Radius, 2);
-            }
-        }
+        public override double Area => Math.PI * Math.Pow(Radius, 2);
 
         public double Radius { get; set; }
 
-        public double Diameter { 
-            get
+        public double Diameter
+        {
+            get => Radius * 2;
+            set
             {
-                return Radius * 2;
+                Radius = value / 2;
             }
         }
 
@@ -45,7 +35,7 @@ namespace CSharpOOP.Shapes
             Radius = 20;
         }
 
-        public Circle(string colour, double radius) : base(colour)
+        public Circle(ColourValue colour, double radius) : base(colour)
         {
             Radius = radius;
         }

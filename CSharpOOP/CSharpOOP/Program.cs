@@ -8,8 +8,14 @@ namespace CSharpOOP
         static void Main(string[] args)
         {
             Drawing myDrawing = new Drawing();
-            myDrawing.Draw(new Circle("Blue", 10));
-            myDrawing.Draw(new Rectangle("Green", 10, 10));
+            Circle myCircle = new Circle(Shape.ColourValue.Blue, 10);
+            myDrawing.Draw(myCircle);
+            Rectangle myRectangle = new Rectangle(Shape.ColourValue.Green, 10, 10);
+            myDrawing.Draw(myRectangle);
+
+            myRectangle.Width = 12;
+
+            myCircle.Diameter = 25;
 
             // Circle: Perimeter ~64, Area ~314
             // Rect: Perimeter 40, Area 100

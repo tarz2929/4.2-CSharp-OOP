@@ -22,14 +22,21 @@ namespace CSharpOOP.Shapes
 
         abstract public double Perimeter { get; }
 
-        public string Colour { get; set; }
+        public enum ColourValue
+        {
+            Red,
+            Green,
+            Blue
+        }
+
+        public ColourValue Colour { get; set; }
 
         public Shape()
         {
-            Colour = "Red";
+            Colour = ColourValue.Red;
         }
 
-        public Shape(string colour)
+        public Shape(ColourValue colour)
         {
             Colour = colour;
         }

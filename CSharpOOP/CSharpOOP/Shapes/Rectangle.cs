@@ -12,25 +12,46 @@ namespace CSharpOOP.Shapes
             ✅ “Width”
         */
 
-        public override double Perimeter
-        { 
-            get
-            {
-                return (Length + Width) * 2;
-            }
-        }
+        public override double Perimeter => (Length + Width) * 2;
 
-        public override double Area
+        public override double Area => Length * Width;
+
+        double _length;
+        public double Length
         {
-            get
+            get => _length;
+            set
             {
-                return Length * Width;
+                // The new Length value is shorter than the current Width value.
+                if (value < Width)
+                {
+                    _length = Width;
+                    Width = value;
+                }
+                else
+                {
+                    _length = value;
+                }
             }
         }
 
-        public double Length { get; set; }
-
-        public double Width { get; set; }
+        double _width;
+        public double Width {
+            get => _width;
+            set
+            {
+                // The new Width value is longer than the current Length value.
+                if (value > Length)
+                {
+                    _width = Length;
+                    Length = value;
+                }
+                else
+                {
+                    _width = value;
+                }
+            }
+        }
 
         public Rectangle() : base()
         {
@@ -38,7 +59,7 @@ namespace CSharpOOP.Shapes
             Width = 10;
         }
 
-        public Rectangle(string colour, double length, double width) : base(colour)
+        public Rectangle(ColourValue colour, double length, double width) : base(colour)
         {
             Length = length;
             Width = width;

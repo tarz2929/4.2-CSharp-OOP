@@ -13,22 +13,10 @@ namespace CSharpOOP.Shapes
             ✅ “Height”
         */
 
-        public override double Perimeter
-        {
-            get
-            {
-                double hypotenuse = Math.Sqrt(Math.Pow(Height, 2) + Math.Pow(Base / 2, 2));
-                return hypotenuse * 2 + Base;
-            }
-        }
+        public override double Perimeter => (Math.Sqrt(Math.Pow(Height, 2) + Math.Pow(Base / 2, 2)) * 2) + Base;
 
-        public override double Area
-        {
-            get
-            {
-                return Base * Height / 2;
-            }
-        }
+
+        public override double Area => Base * Height / 2;
 
         public double Base { get; set; }
 
@@ -40,7 +28,7 @@ namespace CSharpOOP.Shapes
             Height = 10;
         }
 
-        public Triangle(string colour, double bottom, double height) : base(colour)
+        public Triangle(ColourValue colour, double bottom, double height) : base(colour)
         {
             Base = bottom;
             Height = height;

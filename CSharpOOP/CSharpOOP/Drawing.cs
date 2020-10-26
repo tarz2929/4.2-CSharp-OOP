@@ -1,6 +1,7 @@
 ﻿using CSharpOOP.Shapes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CSharpOOP
@@ -25,31 +26,9 @@ namespace CSharpOOP
         // Pillar: Polymorphism
         private List<Shape> Shapes { get; set; }
 
-        public double SpaceCovered 
-        { 
-            get 
-            {
-                double total = 0;
-                foreach (Shape shape in Shapes)
-                {
-                    total += shape.Area;
-                }
-                return total;
-            } 
-        }
+        public double SpaceCovered => Shapes.Select(x => x.Area).Sum();
 
-        public double LinesDrawn
-        {
-            get
-            {
-                double total = 0;
-                foreach (Shape shape in Shapes)
-                {
-                    total += shape.Perimeter;
-                }
-                return total;
-            }
-        }
+        public double LinesDrawn => Shapes.Select(x => x.Perimeter).Sum();
 
         // Pillar: Encapsulation
         public void Draw(Shape shape)
