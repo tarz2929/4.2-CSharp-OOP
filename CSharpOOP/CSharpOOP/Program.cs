@@ -25,11 +25,11 @@ namespace CSharpOOP
             // In-class practice 2.
             List<Person> personList = SeedPersonList();
 
-            Console.WriteLine($"The number of females in the list: {}.");
-            Console.WriteLine($"The average number of characters in first names: {}.");
-            Console.WriteLine($"The full name of the youngest person: {}.");
-            Console.WriteLine($"The first name of the person with the longest last name: {}.");
-            Console.WriteLine($"The gender of the oldest person: {}.");
+            Console.WriteLine($"The number of females in the list: {personList.Where(x => x.Gender == Person.GenderValue.Female).Count()}.");
+            Console.WriteLine($"The average number of characters in first names: {personList.Select(x => x.FirstName.Length).Average()}.");
+            Console.WriteLine($"The full name of the youngest person: {personList.Where(x => x.DateOfBirth == personList.Select(y => y.DateOfBirth).Max()).Select(x => x.FirstName + " " + x.LastName).Single()}.");
+            Console.WriteLine($"The first name of the person with the longest last name: {personList.Where(x => x.LastName.Length == personList.Select(y => y.LastName.Length).Max()).Select(x => x.FirstName).Single()}.");
+            Console.WriteLine($"The gender of the oldest person: {personList.Where(x => x.DateOfBirth == personList.Select(y => y.DateOfBirth).Min()).Select(x => x.Gender).Single()}.");
 
         }
         static List<Person> SeedPersonList()
