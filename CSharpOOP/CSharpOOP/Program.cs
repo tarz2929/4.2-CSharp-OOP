@@ -100,7 +100,30 @@ namespace CSharpOOP
             Console.WriteLine(myIntQueue.Peek());
             // 42
 
-            
+            // ----------
+            // Dictionaries
+            // ----------
+
+            // Normal lists are indexed by ints (starting at 0, then 1, etc).
+            // Dictionaries can be indexed by anything.
+            Dictionary<char, int> characterCounts = new Dictionary<char, int>();
+
+            string example = "The quick brown fox jumps over the lazy dog.";
+
+            foreach (char character in example)
+            {
+                // If the key doesn't exist, add it with a 0.
+                if (!characterCounts.ContainsKey(char.ToUpper(character)))
+                {
+                    characterCounts.Add(char.ToUpper(character), 0);
+                }
+                // Increment the value associated with the character.
+                characterCounts[char.ToUpper(character)] += 1;
+            }
+
+            Console.WriteLine($"There are {characterCounts['o']} O's in the string.");
+
+
         }
     }
 }
