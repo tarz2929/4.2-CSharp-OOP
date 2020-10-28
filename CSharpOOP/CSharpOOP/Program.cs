@@ -4,6 +4,12 @@ using System.Linq;
 
 namespace CSharpOOP
 {
+    class Person
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime DateOfBirth { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -55,6 +61,42 @@ namespace CSharpOOP
 
             // OrderBy is sort of like Sort, except it works with DbSets (to be discussed later).
             myInts.OrderBy(x => x);
+
+            List<Person> myObjectList = new List<Person>()
+            {
+                new Person()
+                {
+                    FirstName = "Joe",
+                    LastName = "Smith",
+                    DateOfBirth = new DateTime(1990, 1, 1)
+                },
+                new Person()
+                {
+                    FirstName = "Sally",
+                    LastName = "Smith",
+                    DateOfBirth = new DateTime(1988, 2, 2)
+                },
+                new Person()
+                {
+                    FirstName = "Bob",
+                    LastName = "Jones",
+                    DateOfBirth = new DateTime(1992, 3, 3)
+                }
+            };
+
+            myObjectList.Where(x => x.LastName[0] == 'S');
+            // First character of last name is S.
+            // Joe, Sally
+
+            myObjectList.Select(x => x.DateOfBirth.Year);
+            // 1990, 1988, 1992
+
+            myObjectList.OrderBy(x => x.FirstName);
+            // Bob, Joe, Sally
+
+            myObjectList.Select(x => x.DateOfBirth.Year).Average();
+            // 1990
+
         }
     }
 }
