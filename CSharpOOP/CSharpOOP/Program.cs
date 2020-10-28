@@ -7,6 +7,10 @@ namespace CSharpOOP
     {
         static void Main(string[] args)
         {
+            // ----------
+            // Lists
+            // ----------
+
             // Create an empty list.
             List<string> myStringList = new List<string>();
 
@@ -57,6 +61,44 @@ namespace CSharpOOP
 
             // Remove everything from a list.
             myInitializedList.Clear();
+
+            // ----------
+            // Stacks & Queues
+            // ----------
+
+            // Stacks: Last In, First Out
+            Stack<int> myIntStack = new Stack<int>();
+
+            // Push = Add
+            myIntStack.Push(12);
+            myIntStack.Push(42);
+            myIntStack.Push(3);
+            // 12, 42, 3
+
+            // Pop = "Grab The Top Thing"
+            Console.WriteLine(myIntStack.Pop());
+            // 3
+            // Note that Pop() removes the item from the stack.
+            // If you just want to get it without removing it, use Peek().
+            Console.WriteLine(myIntStack.Peek());
+            // 42
+
+
+            // Queues: First In, First Out
+            Queue<int> myIntQueue = new Queue<int>();
+
+            // Enqueue = Add
+            myIntQueue.Enqueue(8);
+            myIntQueue.Enqueue(42);
+            myIntQueue.Enqueue(7);
+            // 8, 42, 7
+
+            // Dequeue = Pop() but from the "front" instead of the "top".
+            Console.WriteLine(myIntQueue.Dequeue());
+            // 8
+            // Peek works the same way with Queues as Stacks, view the next thing to be dequeued without removing it.
+            Console.WriteLine(myIntQueue.Peek());
+            // 42
 
             
         }
